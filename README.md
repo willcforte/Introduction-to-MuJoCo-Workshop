@@ -1,4 +1,4 @@
-# Introduction to MuJoCo Workshop
+# Introduction to the MuJoCo Simulator Workshop
 
 This repository contains the presentation and files to accompany a workshop held at the Rutgers N2E Robotics club on February 11th, 2025.
 
