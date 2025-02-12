@@ -1,10 +1,10 @@
-# Exercise 2: Actuating Our Model
+# Exercise 2: Actuating Our Model with Positional Servos
 
 **Actuation** is the process of breathing life into your robotic joints with the aid of motors, muscles, or anything else that causes controllable motion. Instead of falling under the influence of gravity, your robot will be able to hold a pose and change its shape on command by sending signals to the **actuators**, e.g. sending a sine wave to a BLDC motor.
 
 To add actuators to our model, we first need to know which joints we want to be actuated. Sometimes, not all of them need their own motors. In this case, we are actuating `joint1` and `joint2`.
 
-Between the actuator tags, add one motor for each joint:
+Between the actuator tags, add one motor for each joint by uncommenting these tags:
 
 ```xml
 <actuator>

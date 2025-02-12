@@ -36,11 +36,11 @@ with mujoco.viewer.launch_passive(model, data) as viewer:
     prev_error = [0, 0]
     integral = [0, 0]
 
-    # # logging
-    # trajectory1 = []
-    # trajectory2 = []
-    # signals1 = []
-    # signals2 = []
+    # logging
+    trajectory1 = []
+    trajectory2 = []
+    signals1 = []
+    signals2 = []
 
     while viewer.is_running():
         current_time = time.time() - start_time
@@ -56,21 +56,21 @@ with mujoco.viewer.launch_passive(model, data) as viewer:
             control_signal, prev_error[i], integral[i] = pid_control(target_positions[i], current_positions[i], prev_error[i], integral[i], dt)
             control_signals.append(control_signal)
         
-        # # log data
-        # trajectory1.append(target_positions[0])
-        # trajectory2.append(target_positions[1])
-        # signals1.append(control_signals[0])
-        # signals2.append(control_signals[1])
-        # x = np.linspace(0, 10, 500)
+        # log data
+        trajectory1.append(target_positions[0])
+        trajectory2.append(target_positions[1])
+        signals1.append(control_signals[0])
+        signals2.append(control_signals[1])
+        x = np.linspace(0, 10, 500)
 
-        # # CHANGE TO True TO TRIGGER LOGGING
-        # if ((False) and (len(trajectory1) == 500)):
-        #     plt.plot(x, trajectory1)
-        #     plt.plot(x, trajectory2)
-        #     plt.plot(x, signals1)
-        #     plt.plot(x, signals2)
-        #     plt.title("Signals and trajectories until over 1000 timesteps")
-        #     plt.show()
+        # CHANGE TO True TO TRIGGER LOGGING
+        if ((False) and (len(trajectory1) == 500)):
+            plt.plot(x, trajectory1)
+            plt.plot(x, trajectory2)
+            plt.plot(x, signals1)
+            plt.plot(x, signals2)
+            plt.title("Signals and trajectories until over 1000 timesteps")
+            plt.show()
 
         # Apply control signals
         data.ctrl[0] = control_signals[0]  # First actuator controls first joint

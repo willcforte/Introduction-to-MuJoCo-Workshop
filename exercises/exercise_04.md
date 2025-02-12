@@ -1,15 +1,15 @@
-# Exercise 4: Positional Control
+# Exercise 3: Python Simulation
 
-PID control is a classical control method that takes three considerations into account:
+In order to do the mathematical operations required to control our robotic arm, we will use our XML model alongside MuJoCo's Python library. Start with `2R_robotic_arm.py` in the `exercises` folder.
 
-1. How far away are you from your target?
-2. Are you moving towards your target?
-3. How long have you been away from your target?
+You'll notice that we start by importing our XML file:
 
-The sum of these considerations will result in an integer that influences the acceleration provided by the motor.
+```python
+# Load our XML model
+model = mujoco.MjModel.from_xml_path("2R_robotic_arm.xml")
+data = mujoco.MjData(model)
+```
 
-The P term stands for "proportional". If the error is larger, the corrective forces should be larger, and vice versa.
+There is then a function to generate a control signal from a PID controller.
 
-The D term stands for "derivative". If you are moving away from your target, additional force is required to change direction. If you are already moving towards your target, it is possible that no changes are needed.
-
-The I term stands for "integral". While P & D could control things decently well by themselves (a "PD controller"), the integral term is a perfectionist that helps you get the error down to the lowest possible value.
+INSTRUCTIONS WORK IN PROGRESS

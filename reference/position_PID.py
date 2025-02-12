@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import time
 
 # Load our XML model
-model = mujoco.MjModel.from_xml_path("2R_robotic_arm.xml")
+model = mujoco.MjModel.from_xml_path("2R_robotic_arm_position.xml")
 data = mujoco.MjData(model)
 
 # PID controller
