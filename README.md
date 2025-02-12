@@ -2,6 +2,10 @@
 
 This repository contains the presentation and files to accompany a workshop held at the Rutgers N2E Robotics club on February 11th, 2025.
 
+[Presentation PDF](./docs/mujoco_intro_workshop.pdf)
+
+A video of the workshop will be posted soon on the Rutgers N2E Robotics Club youtube channel.
+
 The `docs` folder contains a PDF copy of the presentation.
 
 If you want to follow along with the workshop, read the Markdown guides and use the files provided in the `exercises` directory.
@@ -12,7 +16,7 @@ To see the final demos from this workshop, go to the `reference` directory.
 
 1. [Constructing the XML Model](./exercises/exercise_01.md)
 2. [Actuating Our Model with Positional Servos](./exercises/exercise_02.md)
-3. 2. [Actuating Our Model with Motors](./exercises/exercise_03.md)
+3. [Actuating Our Model with Motors](./exercises/exercise_03.md)
 4. [Using MuJoCo with Python](./exercises/exercise_04.md)
 5. [PID Control of Positional Trajectory](./exercises/exercise_05.md)
 6. [PID Control of Motor Trajectory](./exercises/exercise_06.md)
